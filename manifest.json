@@ -1,0 +1,28 @@
+{
+    "name": "PH age-wrapper remover",
+    "description": "",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "16.png",
+        "32": "32.png",
+        "128": "128.png"
+    },
+    "action": {
+        "default_popup":"popup.html"
+    },
+    "permissions": [],
+    "background": {},
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.pornhub.com/*",
+                "https://pornhub.com/*"
+            ],
+            "js": [
+                "script.js"
+            ],
+            "run_at": "document_idle"
+        }
+    ]
+}
